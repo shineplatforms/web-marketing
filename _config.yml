@@ -40,7 +40,7 @@ sass:
 
 strapi:
   # Your API endpoint (optional, default to http://localhost:1337)
-  endpoint: http://localhost:1337
+  endpoint: https://cms.shineplatforms.com
   collections:
     articles:
       type: articles
