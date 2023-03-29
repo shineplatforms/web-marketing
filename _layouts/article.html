@@ -1,0 +1,7 @@
+---
+layout: base
+---
+
+  <h1 class="page-heading">{{ page.document.title }}</h1>
+  <h2>{{ page.document.strapi_attributes.title }}</h2>
+ 	{{ page.document.strapi_attributes.body | markdownify }}

@@ -1,0 +1,168 @@
+/** SHINE STYLES **/
+body {
+  background-color: var(--color-neutral-100);
+  background-image: var(--svg-background);
+  background-position: top right;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+header {
+  padding: calc(var(--grid-base) * 5.5) calc(var(--grid-base) * 5);
+  text-align: center;
+}
+main {
+  padding: calc(var(--grid-base) * 5.5) calc(var(--grid-base) * 5);
+  text-align: center;
+}
+  main h1 {
+    font-size: calc(var(--font-size-base) * 3.2);
+    letter-spacing: var(--letter-spacing-base);
+    margin-bottom: calc(var(--grid-base) * 4);
+  }
+  main h2 {
+    letter-spacing: var(--letter-spacing-base);
+    margin-bottom: calc(var(--grid-base) * 4);
+  }
+  main p {
+    font-size: calc(var(--font-size-base) * 1.85);
+    line-height: calc(var(--line-height-base) * 0.83);
+    margin-bottom: calc(var(--grid-base) * 12);
+    letter-spacing: var(--letter-spacing-base);
+  }
+  main input[type="email"] {
+    border: 1px solid var(--color-neutral-400);
+    font-size: calc(var(--font-size-base) * 1.5);
+    font-family: var(--font-family-primary);
+    line-height: var(--line-height-base);
+    padding: calc(var(--grid-base) * 4) calc(var(--grid-base) * 6);
+    width: 100%;
+    margin-bottom: calc(var(--grid-base) * 2);
+    border-radius: calc(var(--border-radius-base) * 1.6);
+  }
+    main input[type="email"]::placeholder {
+      color: var(--color-neutral-600);
+    }
+  main button[type="submit"] {
+    border: 0;
+    background-color: var(--color-blue-600);
+    font-family: var(--font-family-primary);
+    font-size: calc(var(--font-size-base) * 1.5);
+    font-weight: 700;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+    padding: calc(var(--grid-base) * 4) calc(var(--grid-base) * 6);
+    width: 100%;
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: calc(var(--border-radius-base) * 1.6);
+  }
+    main button[type="submit"] svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: calc(var(--grid-base) * 2);
+    }
+
+  .cta {
+    max-width: 700px;
+    padding: calc(var(--grid-base) * 8);
+    background-color: var(--color-blue-100);
+    border: 1px solid var(--color-blue-200);
+    border-radius: calc(var(--border-radius-base) * 5.3);
+    box-shadow: var(--drop-shadow-light);
+  }
+    .cta > p {
+      font-size: calc(var(--font-size-base) * 1.5);
+      margin-bottom: calc(var(--grid-base) * 8);
+    }
+
+footer {
+	padding: calc(var(--grid-base) * 5.5) calc(var(--grid-base) * 5);
+}
+	nav {
+		display: flex;
+		gap: calc(var(--grid-base) * 4);
+
+		> a {
+			color: var(--color-blue-600);
+		}
+	}
+
+@media screen and (min-width: 768px) {
+  header {
+    text-align: left;
+    padding: calc(var(--grid-base) * 14) calc(var(--grid-base) * 12);
+  }
+  main {
+    text-align: left;
+    padding: calc(var(--grid-base) * 8) calc(var(--grid-base) * 12);
+  }
+    main h1 {
+      font-size: calc(var(--font-size-base) * 4);
+      margin-bottom: calc(var(--grid-base) * 6);
+    } 
+    main h2 {
+    	margin-bottom: calc(var(--grid-base) * 6);
+    }
+    main p {
+      font-size: calc(var(--font-size-base) * 2.5);
+      margin-bottom: calc(var(--grid-base) * 18);
+    }
+
+    main form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-between;
+    }
+    main input[type="email"] {
+      flex:0 0 63%;
+      margin-bottom: 0;
+    }
+    main button[type="submit"] {
+      flex: 0 0 35%;
+    }
+    main form > div {
+      flex: 0 0 100%;
+      margin-top: calc(var(--grid-base) * 2);
+      font-size: calc(var(--font-size-base) * 1.5);
+    }
+
+	footer {
+		padding: calc(var(--grid-base) * 14) calc(var(--grid-base) * 12);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: calc(var(--grid-base) * 14) calc(var(--grid-base) * 20);
+  }
+  main {
+    padding: calc(var(--grid-base) * 14) calc(var(--grid-base) * 20) calc(var(--grid-base) * 6);
+  }
+    main h1 { 
+      font-size: calc(var(--font-size-base) * 6);
+    }
+    main h2 {
+    	font-size: calc(var(--font-size-base) * 4.25);
+    }
+    main p {
+      font-size: calc(var(--font-size-base) * 3.2);
+      max-width: 1100px;
+    }
+      main > p {
+        margin-bottom: calc(var(--grid-base) * 24);
+      }
+    main form {
+      max-width: 720px;
+    }
+
+	footer {
+		padding: calc(var(--grid-base) * 14) calc(var(--grid-base) * 20);
+	}
+}
