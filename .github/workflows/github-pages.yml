@@ -22,3 +22,6 @@ jobs:
       - uses: helaili/jekyll-action@v2    # Choose any one of the Jekyll Actions
         with:                                # Some relative inputs of your action
           token: ${{ secrets.SECRET_TOKEN }}
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.3'
