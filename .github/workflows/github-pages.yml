@@ -22,4 +22,4 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-
+      - uses: limjh16/jekyll-action-ts@v2
