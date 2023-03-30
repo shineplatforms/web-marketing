@@ -23,3 +23,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       - uses: limjh16/jekyll-action-ts@v2
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.SECRET_TOKEN }}
+          publish_dir: ./_site
