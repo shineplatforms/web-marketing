@@ -1,0 +1,11 @@
+    <form id="initial-form" action="https://formspree.io/f/{% if include.formId %}{{ include.formId }}{% else %}xpzejvoa{% endif %}" method="POST" >
+      <input type="email" name="email" placeholder="Enter email" />
+      <button type="submit">
+        Get updates 
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4631 12.753L1.50018 12.753L1.50018 11.2472L21.4632 11.2472L21.4631 12.753Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5253 1.50012L22.5 12.0001L12.5253 22.5001L11.4883 21.4085L20.4259 12.0001L11.4883 2.59176L12.5253 1.50012Z" fill="white"/>
+        </svg>
+      </button>
+      <div id="form-status"></div>
+    </form>

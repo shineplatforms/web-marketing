@@ -1,0 +1,48 @@
+/* SHINE.SYS.TYPOGRAPHY */
+
+@mixin landing-heading-h1 {
+  font-family: var(--font-family-primary);
+  font-size: calc(var(--font-size-base) * 3.2); 
+  letter-spacing: var(--letter-spacing-base);
+  line-height: 1.25; 
+
+  @media screen and (min-width: 768px) {
+		font-size: calc(var(--font-size-base) * 4);
+  }
+
+  @media screen and (min-width: 1024px) {
+  	font-size: calc(var(--font-size-base) * 6);
+  }
+}
+
+@mixin subtitle-default {
+  font-size: calc(var(--font-size-base) * 1.85);
+  line-height: calc(var(--line-height-base) * 0.83);
+  letter-spacing: var(--letter-spacing-base);
+
+  @media screen and (min-width: 768px) {
+    font-size: calc(var(--font-size-base) * 2.5);
+  }
+
+  @media screen and (min-width: 1024px) {
+  	font-size: calc(var(--font-size-base) * 3.2);
+  }
+}
+
+@mixin subtitle-smaller {
+  font-size: calc(var(--font-size-base) * 2.5);
+  line-height: calc(var(--line-height-base) * 0.83);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+@mixin subtitle-smallest {
+  font-size: calc(var(--font-size-base) * 1.5);
+  line-height: calc(var(--line-height-base) * 0.83);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+@mixin body-default {
+  font-size: var(--font-size-base);
+  line-height: calc(var(--line-height-base) * 0.83);
+  letter-spacing: var(--letter-spacing-base);
+}

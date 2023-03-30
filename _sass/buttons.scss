@@ -1,0 +1,32 @@
+/* SHINE.SYS.BUTTONS */
+
+@mixin primary-standard {
+	@include body-default;
+	font-weight: 500;
+	color: var(--color-white);
+	background-color: var(--color-blue-600);
+
+  cursor: pointer;
+	padding: calc(var(--grid-base) * 3) calc(var(--grid-base) * 5);
+	border-radius: var(--border-radius-base);
+
+	display: inline-flex;
+	gap: calc(var(--grid-base) * 2);
+	justify-content: center;
+  align-items: center;
+
+	&:hover {
+		color: var(--color-white);
+		background-color: var(--color-blue-700);
+	}
+
+	&:active {
+		color: var(--color-white);
+		background-color: var(--color-blue-800);
+	}
+
+	&-disabled {
+		color: var(--color-neutral-700);
+		background-color: var(--color-neutral-300);
+	}
+}

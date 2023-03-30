@@ -2,6 +2,24 @@
 layout: base
 ---
 
-  <h1 class="page-heading">{{ page.document.title }}</h1>
-  <h2>{{ page.document.strapi_attributes.title }}</h2>
- 	{{ page.document.strapi_attributes.body | markdownify }}
+{% assign attrs = page.document.strapi_attributes %}
+
+<section class="section-introduction section-introduction---article">
+  <h1>{{ attrs.title }}</h1>
+  <p>Posted on {{ attrs.publishedAt | date_to_long_string }}</p>
+  <div class="block-share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u={{ '/blog/' | append: attrs.slug | absolute_url | url_encode }}/" title="Share on Facebook" target="_blank">{% include svg/icon-facebook.svg %}</a>
+    <a rel="nofollow" href="https://twitter.com/intent/tweet?text={{ attrs.title| url_encode }}&url={{ '/blog/' | append: attrs.slug | absolute_url | url_encode }}/" title="Share on Twitter" target="_blank">{% include svg/icon-twitter.svg %}</a>
+    <a rel="nofollow" href="mailto:?subject={{ attrs.title | url_encode }}&body={{ '/blog/' | append: attrs.slug | absolute_url | url_encode }}/" title="Share over email"\>{% include svg/icon-email.svg %}</a>
+  </div>
+</section>
+
+<section class="section-content section-article">
+  <!-- <img src="{{ site.api_url | append: attrs.banner.url }}" width="{{ attrs.banner.width }}" height="{{ attrs.banner.height }}" /> -->
+  <div class="container">
+    {{ attrs.body | markdownify }}
+  </div>
+  <div class="container container-actions">
+    {%- include button-blog.html -%}
+  </div>
+</section>
