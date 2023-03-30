@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.3'
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
@@ -22,6 +25,3 @@ jobs:
       - uses: helaili/jekyll-action@v2    # Choose any one of the Jekyll Actions
         with:                                # Some relative inputs of your action
           token: ${{ secrets.SECRET_TOKEN }}
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1.3'
