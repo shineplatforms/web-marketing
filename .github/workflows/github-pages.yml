@@ -22,8 +22,8 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - uses: jeffreytse/jekyll-deploy-action@v0.4.0
+      - uses: limjh16/jekyll-action-ts@v2
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          provider: 'github'
-          token: ${{ secrets.SECRET_TOKEN }}
-          cname: 'staging.shineplatforms.com'
+          github_token: ${{ secrets.SECRET_TOKEN }}
+          publish_dir: ./_site
